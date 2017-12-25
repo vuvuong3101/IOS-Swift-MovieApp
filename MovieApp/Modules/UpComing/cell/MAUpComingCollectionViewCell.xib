@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MAUpComingCollectionViewCell" id="gTV-IL-0wX" customClass="MAUpComingCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="178" height="246"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="178" height="246"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aSZ-dZ-xZt">
+                        <rect key="frame" x="0.0" y="0.0" width="178" height="206"/>
+                        <color key="backgroundColor" red="0.1029691675" green="0.13787888130000001" blue="0.19166386730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-nL-rnt">
+                        <rect key="frame" x="3" y="214" width="172" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="uGm-hr-vwd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 8.6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDa-si-YK6">
+                        <rect key="frame" x="3" y="232" width="172" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="L5g-ta-lAN"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="dZY-qc-7Nx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.2494992244" green="0.33944300440000003" blue="0.47136723019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tw4-nL-rnt" secondAttribute="trailing" constant="3" id="7am-Bl-7LO"/>
+                <constraint firstItem="jDa-si-YK6" firstAttribute="top" secondItem="tw4-nL-rnt" secondAttribute="bottom" constant="3" id="ABF-RX-q5R"/>
+                <constraint firstItem="aSZ-dZ-xZt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H0b-Gl-Pk1"/>
+                <constraint firstItem="tw4-nL-rnt" firstAttribute="top" secondItem="aSZ-dZ-xZt" secondAttribute="bottom" constant="8" id="L9j-qs-8hC"/>
+                <constraint firstAttribute="trailing" secondItem="aSZ-dZ-xZt" secondAttribute="trailing" id="QpV-nH-iDN"/>
+                <constraint firstItem="jDa-si-YK6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="SbZ-Qa-5fa"/>
+                <constraint firstItem="aSZ-dZ-xZt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZqR-UN-Jm2"/>
+                <constraint firstItem="tw4-nL-rnt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="clw-p6-ena"/>
+                <constraint firstAttribute="bottom" secondItem="aSZ-dZ-xZt" secondAttribute="bottom" constant="40" id="sSn-Nz-xhW"/>
+                <constraint firstAttribute="trailing" secondItem="jDa-si-YK6" secondAttribute="trailing" constant="3" id="zPE-eI-9xA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="178" height="246"/>
+            <connections>
+                <outlet property="imageNowPlaying" destination="aSZ-dZ-xZt" id="XeT-5e-gUc"/>
+                <outlet property="rateNowPlaying" destination="jDa-si-YK6" id="OoB-vq-L8j"/>
+                <outlet property="titleNowPlaying" destination="tw4-nL-rnt" id="cmE-sW-CBc"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="60"/>
+        </collectionViewCell>
+    </objects>
+</document>

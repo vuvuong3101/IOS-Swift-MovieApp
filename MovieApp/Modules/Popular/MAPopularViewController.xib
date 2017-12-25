@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MAPopularViewController" customModule="MovieApp" customModuleProvider="target">
+            <connections>
+                <outlet property="popularCollectionView" destination="ZUR-mg-PIK" id="OrW-jI-oUG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05s-6e-BBX">
+                    <rect key="frame" x="0.0" y="26" width="375" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZP-8e-F4H">
+                            <rect key="frame" x="9" y="8" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="40W-KQ-SLH"/>
+                                <constraint firstAttribute="height" constant="40" id="hSC-3H-vnm"/>
+                            </constraints>
+                            <state key="normal" image="arrow-left-2"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="7xp-13-Tfl"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POPULAR  MOVIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iod-bt-yFI">
+                            <rect key="frame" x="114" y="18.5" width="147" height="19.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Iod-bt-yFI" firstAttribute="centerX" secondItem="05s-6e-BBX" secondAttribute="centerX" id="5kk-mb-Sy4"/>
+                        <constraint firstItem="Iod-bt-yFI" firstAttribute="centerY" secondItem="05s-6e-BBX" secondAttribute="centerY" id="6eu-nT-KDO"/>
+                        <constraint firstItem="5ZP-8e-F4H" firstAttribute="leading" secondItem="05s-6e-BBX" secondAttribute="leading" constant="9" id="9qg-pS-KiW"/>
+                        <constraint firstAttribute="height" constant="56" id="Jfw-tk-kY8"/>
+                        <constraint firstItem="5ZP-8e-F4H" firstAttribute="top" secondItem="05s-6e-BBX" secondAttribute="top" constant="8" id="dLz-cJ-qcF"/>
+                        <constraint firstItem="5ZP-8e-F4H" firstAttribute="centerY" secondItem="05s-6e-BBX" secondAttribute="centerY" id="fCn-Ue-3Rk"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZUR-mg-PIK">
+                    <rect key="frame" x="0.0" y="82" width="375" height="585"/>
+                    <color key="backgroundColor" red="0.1546835342" green="0.1546835342" blue="0.1546835342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UeZ-W2-onA">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="05s-6e-BBX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="2T4-SD-LN6"/>
+                <constraint firstItem="05s-6e-BBX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Khk-sq-aBX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZUR-mg-PIK" secondAttribute="trailing" id="LB2-bS-8tC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZUR-mg-PIK" secondAttribute="bottom" id="Qmx-Tv-Opd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="05s-6e-BBX" secondAttribute="trailing" id="Vd8-MV-VZG"/>
+                <constraint firstItem="ZUR-mg-PIK" firstAttribute="top" secondItem="05s-6e-BBX" secondAttribute="bottom" id="dVb-A7-ups"/>
+                <constraint firstItem="ZUR-mg-PIK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hRf-Na-OmF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow-left-2" width="25" height="25"/>
+    </resources>
+</document>
